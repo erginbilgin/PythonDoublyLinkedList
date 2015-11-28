@@ -52,6 +52,15 @@ class MyLinkedList(object):
                     head = Node()
                     tail = Node()
             self.count -= 1
+    def replaceItem(self, itemToReplace, position):
+        if self.count > position:
+            currentNode = self.head
+            if position == 0:
+                currentNode.value = itemToReplace
+            else:
+                for i in range(0, position):
+                    currentNode = currentNode.next
+                currentNode.value = itemToReplace
     def printList(self):
         output = '['
         currentNode = self.head

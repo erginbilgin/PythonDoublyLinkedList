@@ -18,3 +18,7 @@ list.printList()
 list.removeItem(5)
 
 list.printList()
+
+list.replaceItem(102, 5)
+
+list.printList()
