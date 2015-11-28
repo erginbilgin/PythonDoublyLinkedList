@@ -17,6 +17,22 @@ class MyLinkedList(object):
 			self.tail.next = node
 			self.tail = node
 		self.count += 1
+	def insertItem(self, value, position):
+		node = Node(value)
+		if self.count > position:
+			if position == 0:
+				node.next = self.head
+				self.head.prev = node
+				self.head = node
+			else:
+				currentNode = self.head
+				for i in range(0, position):
+					currentNode = currentNode.next
+				node.next = currentNode
+				node.prev = currentNode.prev
+				currentNode.prev.next = node
+				currentNode.prev = node
+			self.count += 1
 	def printList(self):
 		output = '['
 		currentNode = self.head
