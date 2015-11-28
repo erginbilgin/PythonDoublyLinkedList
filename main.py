@@ -24,3 +24,5 @@ list.replaceItem(102, 5)
 list.printList()
 
 print(list.getItemAt(5))
+
+list.printInverse()

@@ -82,3 +82,13 @@ class MyLinkedList(object):
                 output += ', '
         output += ']'
         print(output)
+    def printInverse(self):
+        output = '['
+        currentNode = self.tail
+        while currentNode is not None:
+            output += str(currentNode.value)
+            currentNode = currentNode.prev
+            if currentNode is not None:
+                output += ', '
+        output += ']'
+        print(output)
